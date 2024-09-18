@@ -131,7 +131,13 @@
     #links a:nth-of-type(1){
         position: absolute;
         bottom: 0em;
-        right: 6em;
+        right: 6.5em;
+    }
+
+    #links a:nth-of-type(2){
+        position: absolute;
+        bottom: 0em;
+        right: 3.25em;
     }
 
     #links a:nth-of-type(3){
@@ -140,21 +146,15 @@
         right: 0em;
     }
 
-    #links a:nth-of-type(2){
-        position: absolute;
-        bottom: 0em;
-        right: 3em;
-    }
-
     #links a:nth-of-type(4){
         position: absolute;
-        bottom: 3em;
+        bottom: 3.25em;
         right: 0em;
     }
 
     #links a:nth-of-type(5){
         position: absolute;
-        bottom: 6em;
+        bottom: 6.5em;
         right: 0em;
     }
     
