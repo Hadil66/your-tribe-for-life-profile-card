@@ -64,7 +64,7 @@
 
     @font-face {
         font-family: "Noto sans";
-        src: url('src/routes/MyAssets/NotoSans-VariableFont_wdth,wght.ttf');
+        src: url('/MyAssets/NotoSans-VariableFont_wdth,wght.ttf');
     }
 
      main {        
