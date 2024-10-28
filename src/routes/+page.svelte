@@ -1,10 +1,31 @@
 <script>
+    import { onMount } from 'svelte';
+
 	export let data;
+    let card;
+
+    onMount(() => {
+    const CardMove = (e) => {
+        const rect = card.getBoundingClientRect();
+
+        const xAxis = ((rect.width / 2) - (e.clientX - rect.left)) / 15;
+        const yAxis = ((rect.height / 2) - (e.clientY - rect.top)) / 7.5;
+
+        card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    };
+
+    card.addEventListener('mousemove', CardMove);
+
+    return () => {
+        card.removeEventListener('mousemove', CardMove);
+    };
+    });
 </script>
 
 <main>
 
-    <div id="card">
+    <div class="card" bind:this={card}>
+
 
         <h1>{data.person.name} {data.person.surname} </h1>
         <p>{data.person.bio}</p> 
@@ -78,7 +99,7 @@
         letter-spacing: .2rem;
     }
 
-    #card {
+    .card {
         background: var(--bg-clr);
         height: 15em;
         width: 21em;
@@ -107,7 +128,7 @@
         align-items: center;
         }
 
-    #card {
+    .card {
         width: 25em;
         height: 15em;
         display: grid;  grid-template-columns: 3fr 0fr 1fr; 
